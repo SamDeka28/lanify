@@ -1,7 +1,13 @@
-const { pathify } = require("lane-js/use/pathify")
+const { Server } = require("lane-js");
+const urlConfig = require('./urlConfig')
 
-const Lane = require("lane-js")
+const serverOptions = {
+  urls: urlConfig,
+  template_directory: "views",
+  template_engine: 'hbs',
+  template_static: "public"
+}
 
-let app = Lane({ urls: require("./urlConfig") })
+let app = Server(serverOptions)
 
-app.listen(3000, () => console.log('Server is up and running at 3000'))
+app.listen(3000, _ => console.log("Server is up and running at 3000"))
