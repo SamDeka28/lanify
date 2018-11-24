@@ -4,7 +4,7 @@ Quick start to LaneJs
 Clone the repository After cloning the repository,
 
 ```
-cd lanify
+cd lanify07
 
 npm init
 
